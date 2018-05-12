@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
-export default class App extends Component {
-    render(){
-        return(
-            <div>React Starter</div>
-        );
-    }
+import Menu from '../containers/Menu';
+import Main from './Main';
+
+const App = () => {
+    return (<div>
+        <Menu />
+        <Main />
+    </div>)
 }
+
+export default App;
