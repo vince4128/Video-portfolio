@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCategories } from '../actions';
-import Video from './Video';
 
 class Menu extends Component {
 
@@ -25,8 +24,8 @@ class Menu extends Component {
         return _.map(this.props.categories, categorie => {
             categorie.name = categorie.titre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g,'');
             return(
-                <li key={categorie.id}>
-                    <Link to={`/${categorie.name}`}><p>{categorie.titre} {categorie.id}</p></Link>
+                <li className="a-menu__item" key={categorie.id}>
+                    <Link to={`/${categorie.name}`}><p>{categorie.titre}</p></Link>
                 </li>                
             )
         });
@@ -40,12 +39,13 @@ class Menu extends Component {
         }else{
 
             return <div>
-            <ul>
+            <ul className="m-menu">
+                <li className="a-menu__item"><p>Lars Blumer</p></li>
                 {this.renderList()}
-                <li>
+                <li className="a-menu__item">
                     <Link to={`/me`}><p>Me</p></Link>
                 </li>
-                <li>
+                <li className="a-menu__item">
                     <Link to={`/contact`}><p>Contact</p></Link>
                 </li>
             </ul>            
