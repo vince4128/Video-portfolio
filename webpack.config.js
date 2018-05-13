@@ -25,6 +25,14 @@ const config = {
         filename: '[name].[chunkhash].js'
     },
 
+    //alias (experimental (ok pour les url dans sass))
+    resolve: {
+        alias: {
+            'fontAwesomefonts': path.resolve(__dirname,'node_modules/font-awesome/fonts/'),
+            'node_modules': path.resolve(__dirname,'node_modules/')
+        }
+    },
+
     module: {
         rules: [
             
