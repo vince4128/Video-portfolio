@@ -4,7 +4,10 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchVideos } from '../actions';
 
-class Video extends Component {
+//component
+import Video from '../components/video';
+
+class Videos extends Component {
 
     componentDidMount(){
         this.props.fetchVideos(()=>console.log('Videos chargées'));
@@ -31,7 +34,7 @@ class Video extends Component {
         });
 
         return _.map(filteredVideo, video => {            
-            return <li key={video.id}>{video.titre} {JSON.stringify(video)}</li>
+            return <li key={video.id}><Video video={video}/></li>
         });
 
     }
@@ -43,7 +46,7 @@ class Video extends Component {
         }
 
         return <div>
-            <ul>
+            <ul className="o-video-list">
                 {this.renderList()}
             </ul>
         </div>;
@@ -56,4 +59,4 @@ function mapStateToProps(state){
     return { videos: state.videos};
 }
 
-export default connect(mapStateToProps, { fetchVideos })(Video);
+export default connect(mapStateToProps, { fetchVideos })(Videos);
