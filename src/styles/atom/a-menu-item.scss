@@ -1,0 +1,16 @@
+.a-menu__item{    
+    margin-right: .5rem;    
+}
+
+/*.a-menu__item--tile{
+    align-self: flex-start;
+}*/
+
+.a-menu__item:first-child{
+    justify-self: flex-start;
+    margin-right: auto;
+}
+
+.a-menu__item:last-child{
+    margin-right: 0;
+}
