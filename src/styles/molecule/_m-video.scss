@@ -1,0 +1,16 @@
+.m-video{
+    margin-bottom: 3rem;
+    hr{
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 1em 0;
+        padding: 0; 
+    }
+
+    @include mq('tablet-small', 'max') {
+        //max-width:140px;
+        background-color: #ccc;
+    }
+}
