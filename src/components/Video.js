@@ -8,14 +8,13 @@ const Video = ({video}) => {
     return(
         <section>
         <div className="m-video">
-            <ReactPlayer
+            {<ReactPlayer
                 width="100%"
                 height="100%" 
                 className='a-video-player' 
                 url={`${video.lien}`} 
                 controls
-                preload />           
-            <hr/>                        
+                preload="true" />}                                             
         </div>
             <div className="m-video-info">
             <p>
@@ -23,6 +22,7 @@ const Video = ({video}) => {
             </p>             
             <p className="a-video-info-item--desc">  {video.legende}
             </p>
+            <hr/>
         </div>
         </section>
     )
