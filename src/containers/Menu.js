@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { fetchCategories } from '../actions';
 
 class Menu extends Component {
@@ -17,16 +17,27 @@ class Menu extends Component {
             currentCat:0
         }
 
-    }    
+    }
+    
+    setActive(item){
+        if(item === this.props.location.pathname.substr(1)){
+            return "active";
+        }else{
+            return "";
+        }        
+
+    }
 
     renderList(){
 
         return _.map(this.props.categories, categorie => {
             categorie.name = categorie.titre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g,'');
             return(
-                <li className="a-menu__item" key={categorie.id}>
-                    <Link to={`/${categorie.name}`}><p>{categorie.titre}</p></Link>
-                </li>                
+                <Link to={`/${categorie.name}`} className={"a-menu__item " + this.setActive(categorie.name)}>
+                <li key={categorie.id}>
+                    <p>{categorie.titre}</p>
+                </li>
+                </Link>                
             )
         });
         
@@ -42,12 +53,16 @@ class Menu extends Component {
             <ul className="m-menu">
                 <li className="a-menu__item"><p>Lars Blumer</p></li>
                 {this.renderList()}
-                <li className="a-menu__item">
-                    <Link to={`/me`}><p>Me</p></Link>
-                </li>
-                <li className="a-menu__item">
-                    <Link to={`/contact`}><p>Contact</p></Link>
-                </li>
+                <Link to={`/me`} className={"a-menu__item " + this.setActive('me')}>
+                    <li>
+                        <p>Me</p>
+                    </li>
+                </Link>
+                <Link to={`/contact`} className={"a-menu__item " + this.setActive('contact')}>
+                    <li>
+                        <p>Contact</p>
+                    </li>
+                </Link>
             </ul>            
             </div>
 
@@ -61,4 +76,4 @@ function mapStateToProps(state){
     return { categories: state.categories};
 }
 
-export default connect(mapStateToProps, { fetchCategories })(Menu);
+export default withRouter(connect(mapStateToProps, { fetchCategories })(Menu));
