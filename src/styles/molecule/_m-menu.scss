@@ -1,4 +1,5 @@
 .m-menu{
+    max-width:1368px;
     list-style: none;
     display:flex;
     flex-direction: row;
@@ -8,6 +9,6 @@
     //position: fixed;
     //top:0;    
     height:5rem;
-    margin:0;
+    margin:0 auto;
     padding:0 2.5rem 0 2.5rem;
 }
