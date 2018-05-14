@@ -1,8 +1,5 @@
 .o-video-list{
-    list-style: none;
-    margin:0;
+    margin:0 auto;
     padding:3rem 2.5rem;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+    max-width:640px;
 }

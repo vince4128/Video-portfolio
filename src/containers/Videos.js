@@ -34,7 +34,7 @@ class Videos extends Component {
         });
 
         return _.map(filteredVideo, video => {            
-            return <li key={video.id}><Video video={video}/></li>
+            return <article key={video.id}><Video video={video}/></article>
         });
 
     }
@@ -46,9 +46,9 @@ class Videos extends Component {
         }
 
         return <div>
-            <ul className="o-video-list">
+            <section className="o-video-list">
                 {this.renderList()}
-            </ul>
+            </section>
         </div>;
 
     }
