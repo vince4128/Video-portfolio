@@ -25,7 +25,6 @@ const config = {
         filename: '[name].[chunkhash].js'
     },
 
-    //alias (experimental (ok pour les url dans sass))
     resolve: {
         alias: {
             'fontAwesomefonts': path.resolve(__dirname,'node_modules/font-awesome/fonts/'),
@@ -108,7 +107,7 @@ if(!dev){
     config.plugins.push(
         new CleanWebpackPlugin(['dist/'],{
             dry:false,
-            exclude:['img','video']            
+            exclude:['img','video','fonts']            
         })
     )
 }
