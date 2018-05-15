@@ -8,7 +8,7 @@ class Menu extends Component {
 
     componentDidMount(){
         this.props.fetchCategories(()=>console.log('Catégories chargées'));
-        document.body.classList.toggle('m-menu--open', this.state.open);        
+        //document.body.classList.remove('m-menu--open');        
     }
 
     constructor(props){
@@ -19,8 +19,8 @@ class Menu extends Component {
             open:false
         }
 
-        this.isOpened = this.isOpened.bind(this);
-        this.setOpen = this.setOpen.bind(this);
+        this.setToggle = this.setToggle.bind(this);
+        this.setClose = this.setClose.bind(this);
     }
     
     setActive(item){
@@ -31,32 +31,25 @@ class Menu extends Component {
         }                
     }
 
-    isOpened(){
-        if(this.state.open){
-            return "m-menu--open";
-        } else {
-            return "";
-        }
+    setToggle(){    
+        this.setState({ open: !this.state.open},() => {
+            document.body.classList.toggle('m-menu--open', this.state.open);
+        });        
     }
 
-    setOpen(shouldBeToggled=true){
-        alert('shouldBeToggled est ' + shouldBeToggled + " avant tout opé open " + this.state.open);
-        if(shouldBeToggled){            
-            this.setState({ open: !this.state.open});
-            alert('shouldBeToggled ' + this.state.open);
-        }else{
-            this.setState({ open: false})
-            alert('should Be closed ' + this.state.open);
-        }
-        document.body.classList.toggle('m-menu--open', this.state.open);
+    setClose(){
+        this.setState({ open: false});
+        document.body.classList.remove('m-menu--open');
     }
+
+
 
     renderList(){
 
         return _.map(this.props.categories, categorie => {
             categorie.name = categorie.titre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g,'');
             return(                
-                <li key={categorie.id} className={"a-menu__item " + this.setActive(categorie.name)} onClick={() => this.setOpen(false)}>
+                <li key={categorie.id} className={"a-menu__item " + this.setActive(categorie.name)} onClick={() => this.setClose()}>
                     <Link to={`/${categorie.name}`}>
                         {categorie.titre}
                     </Link>  
@@ -76,17 +69,17 @@ class Menu extends Component {
             <ul className="m-menu ">
                 <li className="a-menu__item">Lars Blumer</li>
                 {this.renderList()}                
-                <li className={"a-menu__item " + this.setActive('me')} onClick={() => this.setOpen(false)}>
+                <li className={"a-menu__item " + this.setActive('me')} onClick={() => this.setClose()}>
                     <Link to={`/me`}>
                         Me
                     </Link>
                 </li>                                
-                <li className={"a-menu__item " + this.setActive('contact')} onClick={() => this.setOpen(false)}>
+                <li className={"a-menu__item " + this.setActive('contact')} onClick={() => this.setClose()}>
                     <Link to={`/contact`}>
                         Contact
                     </Link>
                 </li>  
-                <li className="a-menu__toggle" onClick={() => this.setOpen()}>
+                <li className="a-menu__toggle" onClick={() => this.setToggle()}>
                 toggle
                 </li>              
             </ul>          
