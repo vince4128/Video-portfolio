@@ -1,9 +1,9 @@
+//MIXINS
+@import './mixins/mixins';
+
 // BASE
 @import '~node_modules/normalize.css/normalize.css';
 @import './base/base';
-
-//MIXINS
-@import './mixins/mixins';
 
 // ATOM
 @import './atom/atom';
