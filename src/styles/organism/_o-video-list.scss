@@ -1,5 +1,16 @@
 .o-video-list{
     margin:0 auto;
-    padding:3rem 2.5rem;
+    padding:5rem 2.5rem;
     max-width:640px;
+    transition:all .3s;
+
+    @include mq('tablet', 'max') {
+        padding:3rem;
+    }
+}
+
+.m-menu--open .o-video-list{
+    @include mq('tablet', 'max') {
+        padding:17rem 2.5rem;
+    }
 }

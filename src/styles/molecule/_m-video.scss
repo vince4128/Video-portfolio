@@ -3,9 +3,4 @@
     position: relative;    
     display:block;    
     padding-top: 56.25%;    
-
-    @include mq('tablet-small', 'max') {
-        background-color: #ccc; 
-    }
-
 }

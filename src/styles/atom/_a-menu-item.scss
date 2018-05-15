@@ -1,29 +1,91 @@
-.a-menu__item{
+.a-menu__item{    
     color:#333;    
-    margin-right: 1rem;
-    text-decoration: none;        
+    //margin-right: 1rem;
+       
     font-size: .75rem;
-    color:#333;
     letter-spacing: 1px;
-    transition: .3s all;
-    //text-transform: uppercase;
-    &.active{
+    transition: .3s all;    
+
+    a{
+        display:block;
+        color:#333;
+        text-decoration: none;
+        padding:1.5rem 0.5rem;                  
+    }
+    
+    &.active a{
         text-decoration: underline;
         color: #999;
-    }  
+    }
+    
+    @include mq('tablet', 'max') {
+
+        display: none;
+        width:100%;
+        margin:0;
+        text-align: center;
+
+        a{
+            padding:1rem 0.5rem;                  
+        }
+
+    }
+     
 }
 
-/*.a-menu__item--tile{
-    align-self: flex-start;
-}*/
+.m-menu--open .a-menu__item{
+    @include mq('tablet', 'max') {
+
+        display: initial;
+        width:100%;
+        margin:0;
+        text-align: center;
+
+        a{
+            padding:1rem 0.5rem;                  
+        }
+
+    }
+}
 
 .a-menu__item:first-child{
     justify-self: flex-start;
     margin-right: auto;
     text-transform: uppercase;
     letter-spacing: 2px;
+    padding:1rem 0;
+
+    @include mq('tablet', 'max') {
+        //color:#fff;
+        display: block;
+        width:100%;
+        margin:0;
+    }
+
+    @include mq('tablet', 'max') {
+        //color:#fff;
+        display: block;
+        width:100%;
+        margin:0;
+    }
 }
 
 .a-menu__item:last-child{
-    margin-right: 0;    
+    margin-right: 0;
+    padding-right: 0;    
+}
+
+.a-menu__toggle{
+
+    position:absolute;
+    display: none;
+    padding:1rem .5rem;
+    right:0;
+    top:0;
+    
+    cursor:pointer;
+
+    @include mq('tablet', 'max') {
+        display: initial;
+    }
 }
