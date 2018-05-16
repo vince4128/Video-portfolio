@@ -21,6 +21,7 @@ class Menu extends Component {
 
         this.setToggle = this.setToggle.bind(this);
         this.setClose = this.setClose.bind(this);
+        this.isOpen = this.isOpen.bind(this);
     }
     
     setActive(item){
@@ -42,7 +43,13 @@ class Menu extends Component {
         document.body.classList.remove('m-menu--open');
     }
 
-
+    isOpen(){
+        if(this.state.open){
+            return "nav-menu--open"
+        }else{
+            return "";
+        };
+    }
 
     renderList(){
 
@@ -79,8 +86,10 @@ class Menu extends Component {
                         Contact
                     </Link>
                 </li>  
-                <li className="a-menu__toggle" onClick={() => this.setToggle()}>
-                toggle
+                <li className={"a-menu__toggle " + this.isOpen()} id="nav-icon" onClick={() => this.setToggle()}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </li>              
             </ul>          
             </div>

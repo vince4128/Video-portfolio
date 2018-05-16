@@ -10,7 +10,11 @@
         display:block;
         color:#333;
         text-decoration: none;
-        padding:1.5rem 0.5rem;                  
+        padding:1.5rem 0.5rem;        
+        transition: .3s all;
+        &:hover{
+            text-decoration: underline;
+        }                   
     }
     
     &.active a{
@@ -26,7 +30,10 @@
         text-align: center;
 
         a{
-            padding:1rem 0.5rem;                  
+            padding:1rem 0.5rem;
+            &:hover{
+                background-color: #efefef;
+            }                  
         }
 
     }
@@ -42,18 +49,20 @@
         text-align: center;
 
         a{
-            padding:1rem 0.5rem;                  
+            padding:1rem 0.5rem;
+            border-top:1px solid #eee;                  
         }
 
     }
 }
 
 .a-menu__item:first-child{
+    font-size:1.1rem;
     justify-self: flex-start;
     margin-right: auto;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding:1rem 0;
+    padding:1rem 0;    
 
     @include mq('tablet', 'max') {
         //color:#fff;
