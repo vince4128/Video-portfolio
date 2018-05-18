@@ -11,7 +11,11 @@ class Videos extends Component {
 
     componentDidMount(){
         this.props.fetchVideos(()=>console.log('Videos chargées'));
+        window.scrollTo(0, 0);
+    }
 
+    componentDidUpdate(){
+        window.scrollTo(0, 0);
     }
 
     componentWillReceiveProps(nextProps) {
