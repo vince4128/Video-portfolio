@@ -13,7 +13,6 @@ import reducers from './reducers';
 
 // Component
 import App from './components/App';
-import Menu from './containers/Menu';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -22,5 +21,5 @@ ReactDOM.render(
       <HashRouter>
         <App/>
       </HashRouter>      
-    </Provider>
+    </Provider>        
     , document.querySelector('.app-container'));
