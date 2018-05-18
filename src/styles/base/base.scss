@@ -1,2 +1,15 @@
+@import './animated';
 @import './typography';
 @import './utils/utils';
+
+html {
+    position: relative;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
