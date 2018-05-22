@@ -1,7 +1,7 @@
 .o-video-list{
     margin:0 auto;
     padding:5rem 2.5rem;
-    max-width:640px;
+    max-width:1024px;
     transition:all .3s;
 
     @include mq('tablet', 'max') {
