@@ -5,6 +5,12 @@
     left:0;
     margin: auto;
     width: 100%;
-    z-index:5000;
+    z-index:1;
     transition:all .3s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+:-webkit-full-screen-ancestor .u-fixed-top{
+    position: static;
 }

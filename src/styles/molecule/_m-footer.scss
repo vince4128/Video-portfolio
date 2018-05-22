@@ -9,3 +9,7 @@
     background-color: #efefef;
     text-align: center;
   }
+
+:-webkit-full-screen-ancestor .m-footer{
+    position: static;
+}

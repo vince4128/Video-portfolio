@@ -13,3 +13,21 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+:-webkit-full-screen-ancestor iframe{
+  position: static;
+  display: none;
+}
+
+:-webkit-full-screen-ancestor .m-video{
+  opacity:0;
+}
+
+.m-video:-webkit-full-screen{
+  opacity:1;
+}
+
+iframe:-webkit-full-screen {
+  position:fixed;
+  display: block;
+}
