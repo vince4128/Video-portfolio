@@ -4,7 +4,8 @@ export const FETCH_VIDEOS = "fetch_videos";
 export const FETCH_CATEGORIES = "fetch_categories";
 export const FETCH_CATEGORIE = "fetch_categorie";
 
-const ROOT_URL = 'http://127.0.0.1/VIDEOADMIN/public/index.php?p=api.';
+//const ROOT_URL = 'http://127.0.0.1/VIDEOADMIN/public/index.php?p=api.';
+const ROOT_URL = 'http://www.larsblumers.com/admin/public/index.php?p=api.';
 
 export function fetchVideos(callback){
 
