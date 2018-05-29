@@ -88,9 +88,9 @@
 
     position:absolute;
     display: none;
-    padding:1rem .5rem;
+    padding:1.5rem .5rem 0;
     right:0;
-    top:0;
+    top:.6rem;
     
     cursor:pointer;
 
@@ -100,7 +100,8 @@
 }
 
 .a-menu__item--complement{
-    display: none;
-    //display:block;
+    //display: none;
+    display:block;
     font-size:.75rem;
+    color:rgba(0,0,0,0.6);
 }

@@ -74,7 +74,7 @@ class Menu extends Component {
 
             return <div className={"u-fixed-top u-fixed-top--menu-top "}>
             <ul className="m-menu ">
-                <li className="a-menu__item">Lars Blumers<span className="a-menu__item--complement">{this.props.location.pathname.substr(1)}</span></li>
+                <li className="a-menu__item">Lars Blumers<span className="a-menu__item--complement">writer & director</span></li>
                 {this.renderList()}                
                 <li className={"a-menu__item " + this.setActive('me')} onClick={() => this.setClose()}>
                     <Link to={`/me`}>
