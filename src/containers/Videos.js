@@ -37,7 +37,9 @@ class Videos extends Component {
             === this.props.match.url.substr(1);
         });
 
-        return _.map(filteredVideo, video => {            
+        const orderByPos = _.sortBy(filteredVideo,'pos');
+
+        return _.map(orderByPos, video => {            
             return <article key={video.id}><Video video={video}/></article>
         });
 
