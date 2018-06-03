@@ -9,8 +9,8 @@ const Main = () => {
     return (
         <main>
             <Switch>
-                <Redirect exact path="/" to="/films"/>
-                <Route exact path='/' component={Videos}/>                
+                {/*<Redirect exact path="/" to="/films"/>*/}
+                <Route exact path='/' component={Splash}/>                
                 <Route exact path='/me' component={Me}/>
                 <Route exact path='/contact' component={Contact}/>
                 <Route exact path='/splash' component={Splash}/>

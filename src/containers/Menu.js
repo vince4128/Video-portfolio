@@ -70,6 +70,8 @@ class Menu extends Component {
 
         if(!this.props.categories || this.props.categories === {}){
             return <div>Loading</div>;
+        }else if(this.props.location.pathname === '/'){
+            return "";
         }else{
 
             return <div className={"u-fixed-top u-fixed-top--menu-top "}>
@@ -91,7 +93,7 @@ class Menu extends Component {
                     <span></span>
                     <span></span>
                 </li>              
-            </ul>                      
+            </ul>                  
             </div>
 
         }

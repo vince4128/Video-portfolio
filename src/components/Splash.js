@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 const Splash = () => {
     return(
-        <div>
-            <h1>Splash</h1>
-        </div>
+        <section className="o-splash">
+            <article id="a-splash-enter"><Link to="/films">ENTER</Link></article>
+        </section>
     )
 }
 

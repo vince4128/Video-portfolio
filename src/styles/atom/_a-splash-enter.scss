@@ -1,0 +1,48 @@
+#a-splash-enter {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    font-family: 'helveticaneue', Helvetica, sans-serif, Arial;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 2px 2px rgba(0,0,0,0.3);
+    a{
+        text-transform: none;
+        text-decoration: none;
+        color:#fff;
+    }
+
+    @include mq('desktop', 'max') {
+
+        font-size: 6vw;
+
+    }
+
+    @include mq('tablet-wide', 'max') {
+
+        font-size: 8vw;
+
+    }
+
+    @include mq('tablet', 'max') {
+
+        font-size: 10vw;
+
+    }
+
+    @include mq('phone-wide', 'max') {
+
+        font-size: 12vw;
+
+    }
+
+    @include mq('phone', 'max') {
+
+        font-size: 15vw;
+
+    }
+}
