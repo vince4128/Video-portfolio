@@ -6,16 +6,17 @@ import { fetchVideos } from '../actions';
 
 //component
 import Video from '../components/video';
+import Thumb from '../components/Thumb';
 
 class Videos extends Component {
 
     componentDidMount(){
         this.props.fetchVideos(()=>console.log('Videos chargées'));
-        window.scrollTo(0, 0);
+        //window.scrollTo(0, 0);
     }
 
     componentDidUpdate(){
-        window.scrollTo(0, 0);
+        //window.scrollTo(0, 0);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -24,6 +25,16 @@ class Videos extends Component {
 
     constructor(props){
         super(props);
+        this.state = {
+            activeVideo : null
+        }
+
+        this.setActive = this.setActive.bind(this);
+    }
+
+    setActive(id){
+        alert("set " + id + " as active ! ");
+        this.setState({activeVideo : id});
     }
 
     renderList(){
@@ -41,6 +52,12 @@ class Videos extends Component {
 
         return _.map(orderByPos, video => {            
             return <article key={video.id}><Video video={video}/></article>
+            /*if(video.id !== this.state.activeVideo){
+                return <article key={video.id}><Thumb video={video} img={'thumbimg.jpg'} onVideoSelect={(videoId)=>{this.setActive(videoId)}}/></article>
+            }else{
+                return <article key={video.id}><Video video={video}/></article>
+            }*/
+            
         });
 
     }
