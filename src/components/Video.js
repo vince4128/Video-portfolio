@@ -19,9 +19,8 @@ const Video = ({video}) => {
             <div className="m-video-info">
             <p>
              <span className="a-video-info-item--name">{video.titre}</span> • <span className="a-video-info-item--client">{video.client}</span>&nbsp;
+             <span className="a-video-info-item--desc">  {video.legende}</span>
             </p>             
-            <p className="a-video-info-item--desc">  {video.legende}
-            </p>
         </div>
         </section>
     )

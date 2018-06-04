@@ -1,0 +1,10 @@
+.m-thumb{
+    display: block;
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    transition:all .3s;
+    img{
+        max-width:100%;
+    }
+}
