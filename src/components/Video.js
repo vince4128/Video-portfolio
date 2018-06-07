@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 
-const Video = ({video}) => {
+const Video = (props) => {
 
 //https://help.vimeo.com/hc/fr/articles/224972808-Personnaliser-le-player-int%C3%A9gr%C3%A9    
 
@@ -9,17 +9,25 @@ const Video = ({video}) => {
         <section className="animated fadeIn">
         <div className="m-video">
             {<ReactPlayer
+                onReady={()=>{console.log("ouh yeah ready ! " + props.video.id)}}
                 width="100%"
                 height="100%" 
                 className='a-video-player' 
-                url={`${video.lien}`} 
+                url={`${props.video.lien}`} 
                 controls
-                preload="true" />}                                             
+                preload="true"
+                playing={props.isActive}               
+                config={{
+                    vimeo: {
+                        autoplay:true
+                    }
+                }}
+                />}                                             
         </div>
             <div className="m-video-info">
             <p>
-             <span className="a-video-info-item--name">{video.titre}</span> • <span className="a-video-info-item--client">{video.client}</span>&nbsp;
-             <span className="a-video-info-item--desc">  {video.legende}</span>
+             <span className="a-video-info-item--name">{props.video.titre}</span> • <span className="a-video-info-item--client">{props.video.client}</span>&nbsp;
+             <span className="a-video-info-item--desc">  {props.video.legende}</span>
             </p>             
         </div>
         </section>
