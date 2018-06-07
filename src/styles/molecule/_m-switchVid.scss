@@ -1,0 +1,18 @@
+.m-switchVid{
+    position:relative;
+    display: block;
+    @include clearfix;
+}
+
+.m-switchVid__thumb{
+    //display: inline-block;
+    //position:absolute;
+    //top:0;
+}
+
+.m-switchVid__video{
+    //display: inline-block;
+    position:absolute;
+    width:100%;
+    top:0;
+}

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { fetchVideos } from '../actions';
 
 //component
+import SwitchVid from '../components/SwitchVid';
 import Video from '../components/video';
 import Thumb from '../components/Thumb';
 
@@ -33,7 +34,6 @@ class Videos extends Component {
     }
 
     setActive(id){
-        alert("set " + id + " as active ! ");
         this.setState({activeVideo : id});
     }
 
@@ -51,12 +51,13 @@ class Videos extends Component {
         const orderByPos = _.sortBy(filteredVideo,'pos');
 
         return _.map(orderByPos, video => {            
-            return <article key={video.id}><Video video={video}/></article>
+            //return <article key={video.id}><Video video={video}/></article>
             /*if(video.id !== this.state.activeVideo){
                 return <article key={video.id}><Thumb video={video} img={'thumbimg.jpg'} onVideoSelect={(videoId)=>{this.setActive(videoId)}}/></article>
             }else{
                 return <article key={video.id}><Video video={video}/></article>
             }*/
+            return <article key={video.id}><SwitchVid video={video} isActive={video.id === this.state.activeVideo} onVideoSelect={(videoId)=>{this.setActive(videoId)}} /></article>
             
         });
 
