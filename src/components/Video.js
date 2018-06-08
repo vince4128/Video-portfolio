@@ -5,11 +5,21 @@ const Video = (props) => {
 
 //https://help.vimeo.com/hc/fr/articles/224972808-Personnaliser-le-player-int%C3%A9gr%C3%A9    
 
+
     return(
         <section className="animated fadeIn">
         <div className="m-video">
             {<ReactPlayer
                 onReady={()=>{console.log("ouh yeah ready ! " + props.video.id)}}
+                onPause={
+                    ()=>{
+                        console.log("pause " + props.video.id);
+                        if(!props.isActive){
+                            //playing=false;
+                            console.log('remettre a 0');
+                        }
+                    }
+                }
                 width="100%"
                 height="100%" 
                 className='a-video-player' 
