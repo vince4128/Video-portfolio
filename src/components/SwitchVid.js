@@ -8,9 +8,11 @@ const SwitchVid = (props) => {
 
         if(props.isActive){
             if(isVideo){
-                return "animated fadeInRight"
+                //return "animated fadeInRight"
+                return " "
             }else{
-                return "animated fadeOutLeft"
+                //return "animated fadeOutLeft"
+                return "display-none "
             }
         }else{
             if(isVideo){
@@ -26,7 +28,7 @@ const SwitchVid = (props) => {
     return (
         <article className="m-switchVid">
             {/*<h1>{JSON.stringify(props.isActive)}</h1>*/}
-            <article className={"m-switchVid__thumb " + getClass(false)}><Thumb video={props.video} img={'thumbimg.jpg'} onVideoSelect={props.onVideoSelect}/></article>
+            <article className={"m-switchVid__thumb " + getClass(false)}><Thumb video={props.video} img={props.video.thumb} onVideoSelect={props.onVideoSelect}/></article>
             <article className={"m-switchVid__video " + getClass(true)}><Video video={props.video} isActive={props.isActive}/></article>
         </article>
     )
