@@ -5,7 +5,8 @@ const Thumb = (props) => {
     return(
         <section>
             <article className="m-thumb animated fadeIn" onClick={() => props.onVideoSelect(props.video.id)}>
-                <img src={`img/${props.img}`}></img>
+                {/*<img src={`img/${props.img}`}></img>*/}
+                <img src={`admin/thumb/${props.img}`}></img>
             </article>
             <div className="m-video-info">
                 <p>
