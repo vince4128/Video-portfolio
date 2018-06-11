@@ -108,7 +108,7 @@ if(!dev){
     config.plugins.push(
         new CleanWebpackPlugin(['dist/'],{
             dry:false,
-            exclude:['img','video','fonts']            
+            exclude:['img','video','fonts','admin']            
         })
     )
 }
