@@ -23,6 +23,10 @@ html {
   opacity:0;
 }
 
+:-webkit-full-screen-ancestor .m-switchVid__thumb {
+  opacity:0;
+}
+
 .m-video:-webkit-full-screen{
   opacity:1;
 }
