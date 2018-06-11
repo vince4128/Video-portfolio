@@ -21,8 +21,9 @@ class Videos extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-
-      }
+        this.setState({activeVideo : null});
+        window.scrollTo(0, 0);
+    }
 
     constructor(props){
         super(props);
