@@ -1,24 +1,64 @@
-import React from 'react';
+import React,  { Component } from 'react';
 
-const Thumb = (props) => {
+class Thumb extends Component {
 
-    return(
-        <section>
-            {/*<Link to={`${}`}>*/}
-            <article className="m-thumb animated fadeIn" onClick={() => props.onVideoSelect(props.video.id)}>
-                {/*<img src={`img/${props.img}`}></img>*/}
-                <img src={`admin/thumb/${props.img}`}></img>
+    constructor(props){
+        super(props);
+
+        this.state = {
+            loaded:false
+        }
+
+        this.handleImageLoaded = this.handleImageLoaded.bind(this);
+        this.handleImageError = this.handleImageError.bind(this);
+        this.isImgLoaded = this.isImgLoaded.bind(this);
+    }
+
+    handleImageLoaded(){
+        this.setState({loaded:true});
+    }
+
+    handleImageError(){
+        this.setState({loaded:false});
+    }
+
+    isImgLoaded(el){
+        if(el === "spin"){
+            return this.state.loaded ? "display-none" : "";
+        }else if(el === "img"){
+            return this.state.loaded ? "animated fadeIn" : "";
+        }
+    }
+
+    render(){
+        /*if(!this.state.loaded) {
+            return <div class="m-spinner">
+            <div class="m-spinner__double-bounce1"></div>
+            <div class="m-spinner__double-bounce2"></div>
+          </div>
+        }*/
+        return <section>
+            <article className="m-thumb animated fadeIn" onClick={() => this.props.onVideoSelect(this.props.video.id)}>
+                <img 
+                    src={`admin/thumb/${this.props.img}`}
+                    onLoad={this.handleImageLoaded}
+                    onError={this.handleImageError}
+                    className={this.isImgLoaded("img")}
+                />
+                <div class={"m-spinner " + this.isImgLoaded("spin")}>
+                    <div class="m-spinner__double-bounce1"></div>
+                    <div class="m-spinner__double-bounce2"></div>
+                </div>                
             </article>
-            {/*</Link>*/}
             <div className="m-video-info">
                 <p>
-                    <span className="a-video-info-item--name">{props.video.titre}</span>&nbsp;                    
-                    <span className="a-props.-info-item--client">{props.video.client}</span>&nbsp;
-                    <span className="a-video-info-item--desc">{props.video.legende}</span>
+                    <span className="a-video-info-item--name">{this.props.video.titre}</span>&nbsp;                    
+                    <span className="a-video-info-item--client">{this.props.video.client}</span>&nbsp;
+                    <span className="a-video-info-item--desc">{this.props.video.legende}</span>
                 </p>             
             </div>
         </section>
-    )
+    }
 
 }
 
