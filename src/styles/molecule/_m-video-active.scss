@@ -1,0 +1,12 @@
+.m-video-active{
+    margin-top:5rem;
+    //padding:1.4em;
+    transition: all .3s;
+}
+
+.m-menu--open .m-video-active{
+    @include mq('tablet-small', 'max') {
+        //padding:17rem 2.5rem;
+        padding-top:17rem;
+    }
+}
