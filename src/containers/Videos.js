@@ -41,7 +41,7 @@ class Videos extends Component {
 
     getActive(){
 
-        let activeVideo;
+        let activeVideo = {};
 
         if(this.state.activeVideo){
             _.map(this.props.videos, video => {
@@ -70,6 +70,14 @@ class Videos extends Component {
 
         const orderByPos = _.sortBy(filteredVideo,'pos');
 
+        const isAlone = () => {
+            if(orderByPos.length === 1){
+                return "m-video-list-item--alone";
+            }else{
+                return " ";
+            }  
+        }
+
         return _.map(orderByPos, video => {            
             //return <article key={video.id}><Video video={video}/></article>
             /*if(video.id !== this.state.activeVideo){
@@ -81,7 +89,7 @@ class Videos extends Component {
             /* the good one for now */
             /*return <article className="m-video-list-item" key={video.id}><SwitchVid video={video} isActive={video.id === this.state.activeVideo} onVideoSelect={(videoId)=>{this.setActive(videoId)}} /></article>*/
 
-            return <article className="m-video-list-item" key={video.id}><Thumb video={video} img={video.thumb} isActive={video.id === this.state.activeVideo} onVideoSelect={(videoId)=>{this.setActive(videoId)}} /></article>
+            return <article className={"m-video-list-item " + isAlone()} key={video.id}><Thumb video={video} img={video.thumb} isActive={video.id === this.state.activeVideo} onVideoSelect={(videoId)=>{this.setActive(videoId)}} /></article>
 
         });
 
