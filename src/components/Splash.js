@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 const Splash = () => {
     return(
         <section className="o-splash">
-            <article id="a-splash-enter"><Link to="/films">ENTER</Link></article>
+            <article id="a-splash-enter"><Link to="/films">LARS BLUMERS</Link></article>
         </section>
     )
 }
