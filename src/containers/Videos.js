@@ -17,7 +17,7 @@ class Videos extends Component {
     }
 
     componentDidUpdate(){
-        //window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -32,10 +32,29 @@ class Videos extends Component {
         }
 
         this.setActive = this.setActive.bind(this);
+        this.getActive = this.getActive.bind(this);
     }
 
     setActive(id){
         this.setState({activeVideo : id});
+    }
+
+    getActive(){
+
+        let activeVideo;
+
+        if(this.state.activeVideo){
+            _.map(this.props.videos, video => {
+                if(video.id === this.state.activeVideo){
+                    activeVideo = video;
+                };
+            });
+        }else{
+            return;
+        }
+
+        return activeVideo;
+        
     }
 
     renderList(){
@@ -58,8 +77,12 @@ class Videos extends Component {
             }else{
                 return <article key={video.id}><Video video={video}/></article>
             }*/
-            return <article key={video.id}><SwitchVid video={video} isActive={video.id === this.state.activeVideo} onVideoSelect={(videoId)=>{this.setActive(videoId)}} /></article>
-            
+
+            /* the good one for now */
+            /*return <article className="m-video-list-item" key={video.id}><SwitchVid video={video} isActive={video.id === this.state.activeVideo} onVideoSelect={(videoId)=>{this.setActive(videoId)}} /></article>*/
+
+            return <article className="m-video-list-item" key={video.id}><Thumb video={video} img={video.thumb} isActive={video.id === this.state.activeVideo} onVideoSelect={(videoId)=>{this.setActive(videoId)}} /></article>
+
         });
 
     }
@@ -70,8 +93,23 @@ class Videos extends Component {
             return <div>Loading</div>;
         }
 
-        return <div>
-            <section className="o-video-list">
+        if(this.state.activeVideo){
+            return <div>            
+            <section className="m-video-active">                
+               <article><Video video={this.getActive()} isActive={this.props.isActive}/></article>
+            </section>
+            <section className="o-video-list">            
+                {this.renderList()}
+            </section>
+        </div>;
+
+        }
+
+        return <div>            
+            <section className="m-video-active">                
+                {/*<article><Video video={this.getActive()} isActive={this.props.isActive}/></article>*/}
+            </section>
+            <section className="o-video-list">            
                 {this.renderList()}
             </section>
         </div>;
