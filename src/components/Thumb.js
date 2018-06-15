@@ -39,6 +39,13 @@ class Thumb extends Component {
         }*/
         return <section>
             <article className="m-thumb animated fadeIn" onClick={() => this.props.onVideoSelect(this.props.video.id)}>
+                <div className="m-video-info--thumb">
+                    <p>                        
+                        <p className="a-video-info-item--name">{this.props.video.titre}</p>                    
+                        {/*<span className="a-video-info-item--client">{this.props.video.client}</span>&nbsp;
+                        <span className="a-video-info-item--desc">{this.props.video.legende}</span>*/}
+                    </p>             
+                </div> 
                 <img 
                     src={`admin/thumb/${this.props.img}`}
                     onLoad={this.handleImageLoaded}
@@ -48,7 +55,7 @@ class Thumb extends Component {
                 <div class={"m-spinner " + this.isImgLoaded("spin")}>
                     <div class="m-spinner__double-bounce1"></div>
                     <div class="m-spinner__double-bounce2"></div>
-                </div>                
+                </div>                               
             </article>
             {/*<div className="m-video-info">
                 <p>
