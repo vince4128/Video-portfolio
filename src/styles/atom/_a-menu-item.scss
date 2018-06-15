@@ -22,7 +22,7 @@
         color: #999;
     }
     
-    @include mq('tablet', 'max') {
+    @include mq('tablet-small', 'max') {
 
         display: none;
         width:100%;
@@ -41,7 +41,7 @@
 }
 
 .m-menu--open .a-menu__item{
-    @include mq('tablet', 'max') {
+    @include mq('tablet-small', 'max') {
 
         display: initial;
         width:100%;
@@ -64,14 +64,14 @@
     letter-spacing: 2px;
     padding:1rem 0;    
 
-    @include mq('tablet', 'max') {
+    @include mq('tablet-small', 'max') {
         //color:#fff;
         display: block;
         width:100%;
         margin:0;
     }
 
-    @include mq('tablet', 'max') {
+    @include mq('tablet-small', 'max') {
         //color:#fff;
         display: block;
         width:100%;
@@ -94,7 +94,7 @@
     
     cursor:pointer;
 
-    @include mq('tablet', 'max') {
+    @include mq('tablet-small', 'max') {
         display: initial;
     }
 }
