@@ -50,13 +50,13 @@ class Thumb extends Component {
                     <div class="m-spinner__double-bounce2"></div>
                 </div>                
             </article>
-            <div className="m-video-info">
+            {/*<div className="m-video-info">
                 <p>
                     <span className="a-video-info-item--name">{this.props.video.titre}</span>&nbsp;                    
                     <span className="a-video-info-item--client">{this.props.video.client}</span>&nbsp;
                     <span className="a-video-info-item--desc">{this.props.video.legende}</span>
                 </p>             
-            </div>
+            </div>*/}
         </section>
     }
 
