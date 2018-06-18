@@ -3,7 +3,7 @@
     display:inline-block !important;    
     margin:-4px 0 0 0; /*--fix for inline-block margin*/  
     font-size: 0; /*--fix for inline-block margin*/
-    //padding:8px 2px 2px 4px;
+    //padding:.5rem .5rem .5rem .5rem;
     
     @include mq('tablet-small', 'max') {
         width:100%;
