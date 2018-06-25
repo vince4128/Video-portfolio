@@ -25,12 +25,11 @@
     &:hover{
         background-color: rgba(0,0,0,0.6);
     }
-    p{
-        position:absolute;
+    .m-video-info--thumb__wrapper{
         width:100%;
         text-align: center;
         display:block;
-        top:40%;        
+        top:50%;        
         transform:translateY(-50%);
         -webkit-transform:translateY(-50%);
     }
