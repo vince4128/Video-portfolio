@@ -1,0 +1,85 @@
+.m-me{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    @include mq('tablet-wide', 'max'){
+        padding-top:5rem;
+    }
+
+    div{
+        width:50%;
+        min-height:100vh;
+
+        @include mq('tablet-wide', 'max'){
+            width:100%;
+            margin:0 auto;
+            min-height: auto;
+        }
+    }
+}
+
+.m-me__avatar{
+    width:50%;
+    min-height:100vh;
+    overflow: hidden;
+    background-image: url('~img/lars_square.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    img{
+        max-width: 100%;
+    }
+
+    @include mq('tablet-wide', 'max'){
+        background-size: cover;
+        background-position: center center;
+        min-height:auto;
+        height:50vh;
+    }
+
+    @include mq('phone', 'max'){
+        height:30vh;
+    }
+}
+
+.m-me__text{
+    display:flex;
+    align-items: center;
+    justify-content: center;    
+    p{
+        padding:1rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+
+        @include mq('extra-wide', 'max'){
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+        }
+
+        @include mq('desktop-wide', 'max'){
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+
+        @include mq('desktop', 'max'){
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+
+        @include mq('desktop', 'max'){
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    @include mq('tablet-wide', 'max'){
+        width:100%;
+        height:auto;
+        min-height:auto;
+    }
+}
+
+.me-no-flexbox{
+
+}
