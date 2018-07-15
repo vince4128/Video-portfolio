@@ -31,12 +31,6 @@ class Thumb extends Component {
     }
 
     render(){
-        /*if(!this.state.loaded) {
-            return <div class="m-spinner">
-            <div class="m-spinner__double-bounce1"></div>
-            <div class="m-spinner__double-bounce2"></div>
-          </div>
-        }*/
         return <section>
             <article className="m-thumb animated fadeIn" onClick={() => this.props.onVideoSelect(this.props.video.id)}>
                 <div className="m-video-info--thumb">
@@ -53,18 +47,11 @@ class Thumb extends Component {
                 />
                 <div className={"m-spinner-wrapper " + this.isImgLoaded("spin")}>
                     <div className="m-spinner">
-                        <div class="m-spinner__double-bounce1"></div>
-                        <div class="m-spinner__double-bounce2"></div>
+                        <div className="m-spinner__double-bounce1"></div>
+                        <div className="m-spinner__double-bounce2"></div>
                     </div>
                 </div>                               
             </article>
-            {/*<div className="m-video-info">
-                <p>
-                    <span className="a-video-info-item--name">{this.props.video.titre}</span>&nbsp;                    
-                    <span className="a-video-info-item--client">{this.props.video.client}</span>&nbsp;
-                    <span className="a-video-info-item--desc">{this.props.video.legende}</span>
-                </p>             
-            </div>*/}
         </section>
     }
 
