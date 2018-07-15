@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { fetchVideos } from '../actions';
 
 //component
-import SwitchVid from '../components/SwitchVid';
+//import SwitchVid from '../components/SwitchVid';
 import Video from '../components/video';
 import Thumb from '../components/Thumb';
 
@@ -60,6 +60,7 @@ class Videos extends Component {
     renderList(){
 
         const videos = _.map(this.props.videos, video => {
+            video.pos = parseInt(video.pos);
             return video;
         });
 
