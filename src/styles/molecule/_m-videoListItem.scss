@@ -1,5 +1,19 @@
 .m-video-list-item{
     width:50%;
+
+    &.m-video-list-item--alone{
+        width:100%;
+        display: block !important;
+    }
+
+    @include mq('tablet-small', 'max') {
+        width:100%;
+        //display:block !important;  
+    }
+}
+
+.m-video-list-item.no-flexbox{
+    width:50%;
     display:inline-block !important;    
     margin:-4px 0 0 0; /*--fix for inline-block margin*/  
     font-size: 0; /*--fix for inline-block margin*/

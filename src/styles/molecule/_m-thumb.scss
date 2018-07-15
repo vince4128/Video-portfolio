@@ -3,14 +3,18 @@
     position:relative;
     width:100%;
     height:auto;
+    max-height:90vh;
     overflow:hidden;
     transition:all .3s;
-    margin:0;    
+    margin:0;
+    padding:0;    
     cursor: pointer;
     img{
         max-width:100%;
         margin:0;
         transition:all .3s;
+        //height:150px;
+        transform: scale(1.05);
     }
     p{
         display:block;
@@ -20,10 +24,12 @@
         text-shadow: 1px 1px rgba(0,0,0,0.5);
         text-transform: uppercase;
         letter-spacing: 2px;
+        margin: 0;
+        padding:0;
     }
     &:hover{
         img{
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
     }
 }

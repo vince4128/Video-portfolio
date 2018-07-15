@@ -1,20 +1,22 @@
 .o-video-list{
     margin: 0 auto;
-    //margin:0 2.5rem;
-    //padding:5rem 2.5rem;
-    //padding-top:5rem;
-    //max-width:1024px;
+    transition:all .3s;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+
+.o-video-list.no-flexbox{
+    margin: 0 auto;
     transition:all .3s;
 
     @include mq('tablet', 'max') {
-        //padding:3rem 2.5rem;
-        //padding-top:3rem;
     }
 }
 
 .m-menu--open .o-video-list{
     @include mq('tablet', 'max') {
-        //padding:17rem 2.5rem;
-        //padding-top:17rem;
     }
 }
