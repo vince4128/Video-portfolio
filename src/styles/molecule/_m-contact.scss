@@ -1,0 +1,36 @@
+.m-contact{
+    //padding-top:5rem;
+    display:block;
+    min-height: 100vh;
+    text-align: center;
+    color:#333;
+    background-color: rgb(247,247,247);
+
+    .m-contact__top{
+        display:block;
+        padding-top:5rem;
+        min-height:50vh;
+        background-color:#fff;
+    }
+
+    .m-contact__bottom{
+        display: block;
+        letter-spacing: 0.2em;
+        font-variant-ligatures: normal;
+        text-align: center;
+        text-transform: uppercase;
+        //background-color: rgb(247,247,247);
+    }
+
+    .m-contact__name{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 5rem;
+    }
+
+    .m-contact__mail{
+        text-decoration: underline;
+        letter-spacing: 2px;
+        font-size: 2.5rem;
+    }
+}
