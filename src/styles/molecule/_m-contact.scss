@@ -1,36 +1,107 @@
 .m-contact{
     //padding-top:5rem;
     display:block;
-    min-height: 100vh;
+    min-height: 95vh;
     text-align: center;
     color:#333;
     background-color: rgb(247,247,247);
 
     .m-contact__top{
         display:block;
-        padding-top:5rem;
+        position:relative;
+        box-sizing: border-box;
+        //padding-top:10rem;
         min-height:50vh;
         background-color:#fff;
+
+        background-image: url('~img/lars_square.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        color:#fff;
+
+        z-index: 0;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(40, 40, 45, 0.8);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
     }
 
     .m-contact__bottom{
         display: block;
+        font-weight: 100;
         letter-spacing: 0.2em;
         font-variant-ligatures: normal;
         text-align: center;
         text-transform: uppercase;
         //background-color: rgb(247,247,247);
+        h1,h3,p{
+            font-weight:100;            
+        }
+
+        h3,p,a{
+            color: rgb(122,122,122);
+        }
+
+        h1{
+            @include mq('tablet-small', 'max'){
+                font-size: 1.5rem;                
+            }
+        }
+
+        h3{
+            font-size: 0.9rem;
+            color: rgb(80,80,80);
+
+            @include mq('desktop', 'max'){
+                font-size: 0.7rem;
+            }
+        }
+
+        p{
+            padding:1rem;
+        }
     }
 
     .m-contact__name{
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 5rem;
+        position:absolute;
+        top:50%;
+        width:100%;
+        text-align: center;        
+        margin:0 !important;
+        transform: translateY(-50%);
+
+        h1{
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 3rem;
+
+            @include mq('tablet-small', 'max'){
+                font-size: 1.5rem;                
+            }
+        }
     }
 
     .m-contact__mail{
         text-decoration: underline;
         letter-spacing: 2px;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+        margin:0 !important;
+        cursor: pointer;
+        a{
+            color:#ddd;
+        }
+        @include mq('tablet-small', 'max'){
+            font-size: 1rem;
+        }
     }
 }
