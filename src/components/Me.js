@@ -25,6 +25,23 @@ const Me = () => {
             I have shot many short films and one feature film:<br/>
             It's called Mike with Marc-André Grondin, Christa Theret and Eric Elmosnino.<br/> 
             I have shot many commercials. Some of them quite funny. Some won prizes. </p>
+            <p>See prizes</p>
+        </div>
+
+        <div id="prizes" className="m-me__prize">
+            <p>prize :</p>
+            <ul>
+                <li>2012 Winner Best Screenplay, Max Ophüls Festival 2011 for MIKE</li>  
+                <li>2014 Effie France Gold for Leclerc „Parapharmacie“</li>
+                <li>2013 Grand Prix Stratégies de la Publicité Mention for Axa</li>
+                <li>2006 Bronze Digital Lion Cannes Advertising Film Festival for Wilkinson „Dare“</li>
+                <li>2006 EACA Euro Effies Bronze</li>
+                <li>2003 Gramado Cinema Festival / Silver Cock</li>
+                <li>2003 Grand Prix Stratégies de la Publicité Winner</li>
+                <li>2003 First Prize Rosenheim Film Festival for Predateurs Domestiques</li>
+                <li>2002 Grand Prix Stratégies de la Publicité Mention</li>
+                <li>2002 Bronze Prix Club des Directeurs Artistiques</li>
+            </ul>
         </div>
 
     </section>
