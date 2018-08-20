@@ -20,6 +20,7 @@ const Contact = () => {
                 <section className="m-contact__card">
 
                     <div className="m-contact__card__flag">
+                        <img src="/img/flag-fr.png"/>
                         <p>FRANCE</p>
                     </div>
 
@@ -46,6 +47,7 @@ const Contact = () => {
                 <section className="m-contact__card">
 
                 <div className="m-contact__card__flag">
+                    <img src="/img/flag-de.png"/>
                     <p>GERMANY</p>
                 </div>                            
 
