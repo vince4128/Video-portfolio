@@ -1,10 +1,11 @@
 .m-me{
     display:flex;
+    position:relative;
     flex-wrap: wrap;
     flex-direction: row;
 
     @include mq('tablet-wide', 'max'){
-        padding-top:5rem;
+        //padding-top:5rem;
     }
 
     div{
@@ -46,7 +47,8 @@
 .m-me__text{
     display:flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    flex-direction: column;    
     p{
         padding:1rem;
         font-size: 1.5rem;
@@ -67,10 +69,11 @@
             line-height: 1.7rem;
         }
 
-        @include mq('desktop', 'max'){
-            font-size: 1.2rem;
-            line-height: 1.7rem;
+        @include mq('tablet-wide', 'max'){
+            font-size: 1rem;
+            line-height: 1.5rem;
         }
+
     }
 
     @include mq('tablet-wide', 'max'){
@@ -78,6 +81,10 @@
         height:auto;
         min-height:auto;
     }
+}
+
+.m-me__prize{
+    padding: 5rem 3rem;
 }
 
 .me-no-flexbox{
