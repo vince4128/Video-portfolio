@@ -1,4 +1,5 @@
 import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Me = () => {
     return(
@@ -24,24 +25,56 @@ const Me = () => {
             We will see in 50 years if I was a good father.<br/>
             I have shot many short films and one feature film:<br/>
             It's called Mike with Marc-André Grondin, Christa Theret and Eric Elmosnino.<br/> 
-            I have shot many commercials. Some of them quite funny. Some won prizes. </p>
-            <p>See prizes</p>
+            I have shot many commercials. Some of them quite funny. Some won <AnchorLink href='#prizes'>prizes</AnchorLink>.</p>
+            <article classNames="a-me__to-prizes"><AnchorLink  href='#prizes'>See prizes</AnchorLink></article>
         </div>
 
         <div id="prizes" className="m-me__prize">
-            <p>prize :</p>
-            <ul>
-                <li>2012 Winner Best Screenplay, Max Ophüls Festival 2011 for MIKE</li>  
-                <li>2014 Effie France Gold for Leclerc „Parapharmacie“</li>
-                <li>2013 Grand Prix Stratégies de la Publicité Mention for Axa</li>
-                <li>2006 Bronze Digital Lion Cannes Advertising Film Festival for Wilkinson „Dare“</li>
-                <li>2006 EACA Euro Effies Bronze</li>
-                <li>2003 Gramado Cinema Festival / Silver Cock</li>
-                <li>2003 Grand Prix Stratégies de la Publicité Winner</li>
-                <li>2003 First Prize Rosenheim Film Festival for Predateurs Domestiques</li>
-                <li>2002 Grand Prix Stratégies de la Publicité Mention</li>
-                <li>2002 Bronze Prix Club des Directeurs Artistiques</li>
-            </ul>
+
+            <article class="m-me__timeline">                
+                <ul>
+                    <span class="m-me__timeline__date">2012</span>
+                    <li>                                     
+                        <p>Winner Best Screenplay, Max Ophüls Festival 2011 for MIKE</p>                        
+                    </li>
+                    <span class="m-me__timeline__date">2014</span>
+                    <li>                                     
+                        <p>Effie France Gold for Leclerc „Parapharmacie“</p>                        
+                    </li>
+                    <span class="m-me__timeline__date">2013</span>
+                    <li>                                     
+                        <p>Grand Prix Stratégies de la Publicité Mention for Axa</p>                        
+                    </li>
+                    <span class="m-me__timeline__date">2006</span>
+                    <li>                                     
+                        <p>Bronze Digital Lion Cannes Advertising Film Festival for Wilkinson „Dare“</p>                        
+                    </li>
+                    <span class="m-me__timeline__date">2006</span>
+                    <li>                                     
+                        <p>EACA Euro Effies Bronze</p>                        
+                    </li>
+                    <span class="m-me__timeline__date">2003</span>
+                    <li>                                     
+                        <p>Gramado Cinema Festival / Silver Cock</p>                        
+                    </li>
+                    <span class="m-me__timeline__date">2003</span>
+                    <li>                                     
+                        <p>Grand Prix Stratégies de la Publicité Winner</p>                        
+                    </li>
+                    <span class="m-me__timeline__date">2003</span>
+                    <li>                                     
+                        <p>First Prize Rosenheim Film Festival for Predateurs Domestiques</p>                        
+                    </li>
+                    <span class="m-me__timeline__date">2003</span>
+                    <li>                                     
+                        <p>Grand Prix Stratégies de la Publicité Mention</p>                        
+                    </li>
+                    <span class="m-me__timeline__date">2002</span>
+                    <li>                                     
+                        <p>Bronze Prix Club des Directeurs Artistiques</p>                        
+                    </li>
+                </ul>
+            </article>
         </div>
 
     </section>
