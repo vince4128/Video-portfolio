@@ -1,0 +1,38 @@
+.m-btn--circle{
+    display:block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 1rem;
+    line-height: 100px;
+    background-color: #333;
+    color:#fff;
+    text-align:center;    
+}
+
+.m-btn--prizes{
+    
+}
+
+a .m-btn--prizes{
+    display:block;    
+    text-decoration: none;
+    position:absolute;
+    bottom:2rem;
+    left: 0;
+    right: 0;
+    margin:auto;
+
+    @include mq('tablet-wide', 'max'){
+        width:100%;
+        bottom:0;
+        border-radius:0;
+        height:4rem;
+        line-height: 4rem;
+    }
+
+}
+
+.a-prizes{
+    text-decoration: none;
+}
