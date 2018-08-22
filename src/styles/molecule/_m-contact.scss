@@ -36,6 +36,7 @@
 
     .m-contact__bottom{
         display: flex;
+        flex-direction: row;
         justify-content: center;
         width:100%;
         font-weight: 100;
@@ -44,6 +45,11 @@
         text-align: center;
         text-transform: uppercase;
         //background-color: rgb(247,247,247);
+
+        @include mq('tablet', 'max'){
+            flex-direction: column;
+        }
+
         h1,h3,p{
             font-weight:100;            
         }
@@ -80,7 +86,13 @@
         padding:1.2rem;
         //margin:0 0.25rem .5rem 0.25rem;
         background-color: rgb(247,247,247);
-        //box-shadow: rgba(40, 40, 45, 0.1) 1px 1px 1px 1px;
+        //box-shadow: rgba(40, 40, 45, 0.1) 1px 1px 1px 1px;      
+        
+        @include mq('tablet', 'max'){
+            width:100%;
+            max-width:100%;
+            margin-bottom:50px;
+        }
 
         .m-contact__card__flag{
             position: absolute;
