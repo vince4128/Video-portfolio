@@ -13,7 +13,7 @@
         min-height:50vh;
         background-color:#fff;
 
-        background-image: url('~img/lars_square.jpg');
+        background-image: url('~img/lars_contact.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -85,7 +85,7 @@
         max-width:650px;
         padding:1.2rem;
         //margin:0 0.25rem .5rem 0.25rem;
-        background-color: rgb(247,247,247);
+        //background-color: rgb(247,247,247);
         //box-shadow: rgba(40, 40, 45, 0.1) 1px 1px 1px 1px;      
         
         @include mq('tablet', 'max'){
