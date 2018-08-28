@@ -147,13 +147,13 @@ $color:#333;
         padding: 25px 0 0 10px;
     } 
       
-      &:before{
+      /*&:before{
           position:absolute;
           top:-10px;
           left:-11px;
           content:"\039b";
           color:#ccc;
-      }
+      }*/
       &:after {
         content: "";
         position: absolute;

@@ -4,7 +4,7 @@
     height: 100px;
     border-radius: 50%;
     font-size: 1rem;
-    line-height: 100px;
+    line-height: 85px;
     background-color: #333;
     color:#fff;
     text-align:center;    
@@ -22,6 +22,25 @@ a .m-btn--prizes{
     left: 0;
     right: 0;
     margin:auto;
+
+    &:after {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        content: '';
+        width: 24px;
+        height: 24px;
+        margin: -6px 0 0 -12px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        box-sizing: border-box;
+        transition:top .3s ease;
+    }
+    &:hover:after{
+        top: 60%;
+    } 
 
     @include mq('tablet-wide', 'max'){
         width:100%;

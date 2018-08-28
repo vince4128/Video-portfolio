@@ -26,10 +26,14 @@ const Me = () => {
             I have shot many short films and one feature film:<br/>
             It's called Mike with Marc-André Grondin, Christa Theret and Eric Elmosnino.<br/> 
             I have shot many commercials. Some of them quite funny. Some won <AnchorLink href='#prizes'>prizes</AnchorLink>.</p>
-            <AnchorLink  href='#prizes' className="a-prizes"><span className="m-btn--circle m-btn--prizes">See prizes</span></AnchorLink>
+            {/*<AnchorLink  href='#prizes' className="a-prizes">
+            <span className="m-btn--circle m-btn--prizes">
+            See prizes
+            </span>
+</AnchorLink>*/}
         </div>
 
-        <div id="prizes" className="m-me__prize">
+        {/*<div id="prizes" className="m-me__prize">
 
             <article class="m-me__timeline">                
                 <ul>                    
@@ -71,7 +75,7 @@ const Me = () => {
                     </li>
                 </ul>
             </article>
-        </div>
+        </div>*/}
 
     </section>
     
