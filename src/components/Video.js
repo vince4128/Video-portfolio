@@ -35,10 +35,9 @@ const Video = (props) => {
                 />}                                             
         </div>
             <div className="m-video-info">
-            <p>
-             <span className="a-video-info-item--client">{props.video.client}</span> • <span className="a-video-info-item--name">{props.video.titre}</span>&nbsp;
-             <span className="a-video-info-item--desc">  {props.video.legende}</span>
-            </p>             
+             <p className="a-video-info-item--client">{props.video.client}</p>
+             <p className="a-video-info-item--name">{props.video.titre}</p>&nbsp;
+             {/*<p className="a-video-info-item--desc">  {props.video.legende}</p>*/}
         </div>
         </section>
     )

@@ -1,8 +1,13 @@
 .m-video-info{
-    margin-bottom: 3rem;
+    //margin-bottom: 3rem;
     text-align: center;
     color:#333;
     font-size:.85em;
+    padding-top:.5rem;
+
+    p{
+        margin:0.2rem;
+    }
 
     hr{
         display: block;
