@@ -4,6 +4,37 @@
     width:100%;
     min-height: 100vh;
     height:100%;
-    background: url('~img/splash.jpg') no-repeat fixed center;
+    background: url('~img/splash.jpg') no-repeat fixed top;
     background-size: cover;
+
+    h1,h2,li{        
+        font-family: 'helveticaneue', Helvetica, sans-serif, Arial;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        line-height: 1;
+    }
+
+    h1{
+        font-size: 5rem;
+        font-family: 'worksans-thin-webfont', Helvetica, sans-serif, Arial;
+    }
+
+    h2{
+        font-size: 3rem;
+        font-family: 'worksans-light-webfont', Helvetica, sans-serif, Arial;
+    }
+
+    li{
+        font-size:2rem;
+        font-family: 'worksans-light-webfont', Helvetica, sans-serif, Arial;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    ul{
+        list-style: none;
+        padding:0;
+        margin:0;
+    }
 }

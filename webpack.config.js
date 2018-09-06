@@ -29,7 +29,8 @@ const config = {
         alias: {
             'fontAwesomefonts': path.resolve(__dirname,'node_modules/font-awesome/fonts/'),
             'node_modules': path.resolve(__dirname,'node_modules/'),
-            'img': path.resolve(__dirname, 'dist/img/')
+            'img': path.resolve(__dirname, 'dist/img/'),
+            'fonts':path.resolve(__dirname,'dist/fonts/')
         }
     },
 

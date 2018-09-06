@@ -1,5 +1,25 @@
-*{
-    font-family: 'helveticaneue', Helvetica, sans-serif, Arial;
+/*h1{
+    //font-size: 3.75em;
 }
 
-//@include font-face('helveticaneue','~fonts/HelveticaNeue-Light');
+h1,h2,h3,h4,h5{
+    //font-family: 'lato-light',sans-serif;
+    font-family: 'epilepsjaround-solid',sans-serif;
+}
+
+p,ul,li{
+    font-family: 'helveticaneue',sans-serif;
+}
+
+body{
+    //font-family: 'lato-regular',sans-serif;
+    font-family: 'epilepsjaround-solid',sans-serif;
+    //color:#fff;
+}*/
+
+// Imports
+@include font-face('worksans-thin-webfont', '../../dist/fonts/worksans-thin-webfont');
+//@include font-face('worksans-thin-webfont', '../../dist/fonts/worksans-extralight-webfont');
+@include font-face('worksans-light-webfont', '../../dist/fonts/worksans-light-webfont');
+@include font-face('worksans-medium-webfont', '../../dist/fonts/worksans-medium-webfont');
+@include font-face('worksans-black-webfont', '../../dist/fonts/worksans-black-webfont');
